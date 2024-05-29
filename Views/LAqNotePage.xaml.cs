@@ -1,4 +1,4 @@
-namespace Leonardo_Andrade_PROYECTOAPUNTES;
+namespace Leonardo_Andrade_PROYECTOAPUNTES.Views;
 
 public partial class LAqNotePage : ContentPage
 {

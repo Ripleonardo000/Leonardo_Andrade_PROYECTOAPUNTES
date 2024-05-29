@@ -71,10 +71,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="LAqAboutPage.xaml">
+	  <MauiXaml Update="Views\LAqAboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="LAqNotePage.xaml">
+	  <MauiXaml Update="Views\LAqNotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

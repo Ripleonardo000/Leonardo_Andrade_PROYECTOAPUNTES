@@ -3,7 +3,8 @@
     x:Class="Leonardo_Andrade_PROYECTOAPUNTES.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Leonardo_Andrade_PROYECTOAPUNTES"
+
+    xmlns:views="clr-namespace:Leonardo_Andrade_PROYECTOAPUNTES.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="Leonardo_Andrade_PROYECTOAPUNTES">
 
@@ -11,12 +12,12 @@
     <TabBar>
         <ShellContent
             Title="Notes"
-            ContentTemplate="{DataTemplate local:LAqNotePage}"
+            ContentTemplate="{DataTemplate views:LAqNotePage}"
             Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
 
         <ShellContent
             Title="About"
-            ContentTemplate="{DataTemplate local:LAqAboutPage}"
+            ContentTemplate="{DataTemplate views:LAqAboutPage}"
             Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
     </TabBar>
 
