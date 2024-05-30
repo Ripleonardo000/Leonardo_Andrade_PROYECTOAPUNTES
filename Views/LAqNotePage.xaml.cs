@@ -1,5 +1,5 @@
 namespace Leonardo_Andrade_PROYECTOAPUNTES.Views;
-
+[QueryProperty(nameof(ItemId), nameof(ItemId))]
 public partial class LAqNotePage : ContentPage
 {
     string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");
@@ -11,21 +11,32 @@ public partial class LAqNotePage : ContentPage
         string appDataPath = FileSystem.AppDataDirectory;
         string randomFileName = $"{Path.GetRandomFileName()}.notes.txt";
 
+
         LoadNote(Path.Combine(appDataPath, randomFileName));
     }
-  
+    public string ItemId
+    {
+        set { LoadNote(value); }
+    }
     private void SaveButton_Clicked(object sender, EventArgs e)
     {
-        // Save the file.
-        File.WriteAllText(_fileName, TextEditor.Text);
+        if (BindingContext is Models.LA000ALLNOTES note)
+        {
+            File.WriteAllText(note.Filename, TextEditor.Text);
+        }
+
+        await Shell.Current.GoToAsync("..");
     }
     private void DeleteButton_Clicked(object sender, EventArgs e)
     {
-        // Delete the file.
-        if (File.Exists(_fileName))
-            File.Delete(_fileName);
+        if (BindingContext is Models.LA000ALLNOTES note)
+        {
+            // Delete the file.
+            if (File.Exists(note.Filename))
+                File.Delete(note.Filename);
+        }
 
-        TextEditor.Text = string.Empty;
+        await Shell.Current.GoToAsync("..");
     }
 
     private void LoadNote(string fileName)

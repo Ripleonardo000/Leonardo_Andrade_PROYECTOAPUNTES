@@ -5,6 +5,8 @@
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute(nameof(Views.LA00ALLNOTES), typeof(Views.LA00ALLNOTES));
         }
     }
 }

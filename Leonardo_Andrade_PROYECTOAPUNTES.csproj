@@ -71,7 +71,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Models\LA0ALLNOTES.xaml">
+	  <MauiXaml Update="Views\LA00ALLNOTES.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LAqAboutPage.xaml">
